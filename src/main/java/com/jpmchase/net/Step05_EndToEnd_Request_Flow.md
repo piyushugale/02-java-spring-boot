@@ -1,9 +1,6 @@
 
 Client → Controller → Service → DB → Service → Controller → Client
 
-```markdown
-# REST Request-Response Flow in Spring Boot
-
 ```
 
 User / Client
