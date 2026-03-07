@@ -7,8 +7,11 @@ Spring Data JPA:
 1.Hibernate
 2.CRUD operations
 3.Entity mapping
-4.Repositories
+4.Repositories/DAO Layer
 -----------------
+Request > Controller > Service Layer > DAO/Repository > Database
+-----------------
+
 
 1️⃣ JPA (Java Persistence API) - specification
 > JPA is a specification for mapping Java objects (entities) <--> to relational database tables. 
@@ -136,7 +139,7 @@ Use annotations to map fields to columns:
         @Column → Optional column mapping
 
 
-6️⃣ Repositories- Interfaces for automatic data access
+6️⃣ Repositories/DAO layer - Interfaces for automatic data access
     - The component that handles the code for saving and finding data in the database.
     - You don't write SQL queries or the implementation code to talk to the database. You only define the interface, and Spring generates the logic for you at runtime.
     - Spring Data JPA generates the implementation at runtime.
