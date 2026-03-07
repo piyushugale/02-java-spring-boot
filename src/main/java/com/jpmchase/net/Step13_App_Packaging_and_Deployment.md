@@ -15,13 +15,11 @@ Create a Dockerfile to wrap the JAR in a lightweight Linux environment.
         FROM eclipse-temurin:17-jdk-alpine
         COPY target/*.jar app.jar
         ENTRYPOINT ["java", "-jar", "/app.jar"]
-        Use code with caution.
 
 Build and Run:
     bash
         docker build -t my-spring-app .
         docker run -p 8080:8080 my-spring-app
-        Use code with caution.
 
 ### 3. Cloud Deployment (AWS/Azure)
 
