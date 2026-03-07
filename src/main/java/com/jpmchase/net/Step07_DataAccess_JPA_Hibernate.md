@@ -1,3 +1,12 @@
+API Request Flow ?
+------------------
+Request > Controller > Service Layer > DAO/Repository > Database -
+   |                                                             |
+   Response < Controller < Service Layer < DAO/Repository --------                       
+------------------
+
+
+
 Data Access with JPA/Hibernate:
 
 > Spring applications often need to store and retrieve data from a database.
@@ -8,8 +17,6 @@ Spring Data JPA:
 2.CRUD operations
 3.Entity mapping
 4.Repository/DAO Layer
------------------
-Request > Controller > Service Layer > DAO/Repository > Database
 -----------------
 
 
