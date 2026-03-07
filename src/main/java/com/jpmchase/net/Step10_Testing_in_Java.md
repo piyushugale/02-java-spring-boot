@@ -49,6 +49,22 @@ Real Service Perspective: "I am a real WeatherService. When the App calls me, I'
 Mock Service Perspective: "I am a fake WeatherService. I look exactly like the real one, but I have no 'brain'. 
                            When the App calls me, I don't touch a satellite; I just shout 5°C immediately because the Test told me to."
 
+`@BeforeEach` (The Refresh)     : Before testAddItem runs, Spring creates a brand new cart. Then, before testRemoveItem runs, it destroys the old one and creates another new one. This prevents "dirty data" from leaking between tests.
+The Test                        : Each test thinks it is the first and only test running.
+`@AfterEach` (The Housekeeping) : After the test finish (whether they pass or fail), this block runs to close database connections or delete temporary files created during the test.
+
+
+Scenario	                Who throws the error?	        What does your code see?
+-----------------------------------------------------------------------------------------------------
+Testing	                    Mockito (Simulated)	            RuntimeException("Mock Error")
+Real Life	                Database Driver (Actual)	    DataAccessException("Connection refused")
+-----------------------------------------------------------------------------------------------------
+
+"Happy, Sad, and Edge" framework in one-liners:
+    Happy Path  : Verifies the code works perfectly when given valid inputs and everything goes as planned.
+    Sad Path    : Tests how the code handles invalid data or system failures (like a database crash) using Mocks.
+    Edge Case   : Checks the extreme limits of your logic, such as empty strings, zero, or maximum allowed values.
+
 
 
 ## 5. Tools & Utilities
