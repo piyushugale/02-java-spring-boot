@@ -137,7 +137,8 @@ Use annotations to map fields to columns:
 
 
 6️⃣ Repositories- Interfaces for automatic data access
-    - You don't write  SQL queries or the implementation code to talk to the database. You only define the interface, and Spring generates the logic for you at runtime.
+    - The component that handles the code for saving and finding data in the database.
+    - You don't write SQL queries or the implementation code to talk to the database. You only define the interface, and Spring generates the logic for you at runtime.
     - Spring Data JPA generates the implementation at runtime.
 
 Example:
@@ -165,3 +166,9 @@ Hibernate       → JPA implementation
 Spring Data JPA → Simplifies CRUD operations
 Entity Mapping  → Maps Java class to DB table
 Repositories    → Interfaces for automatic data access
+
+
+Controller: The "Receptionist" that handles incoming web requests and sends back responses.
+Service: The "Brain" where all the business logic, calculations, and rules live.
+Repository: The "Librarian" that handles the code for saving and finding data in the database.
+Database: The "Warehouse" where your data is permanently stored and organized.
